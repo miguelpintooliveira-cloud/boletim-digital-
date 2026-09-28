@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">  
-    <title>boletim digital</title>
+  <meta charset="UTF-8" />
+  <!-- Garante que o site fique bom no celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boletim Digital</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <h1>Boletim Digital</h1>
+    <p class="subtitulo">8º Ano</p>
+    <p class="estudante">Estudante Exemplo</p>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- CARDS DE RESUMO -->
+    <section class="cards" id="cards">
+      <!-- Os cards serão criados pelo JavaScript -->
+    </section>
+
+    <!-- TABELA DE DISCIPLINAS -->
+    <section class="tabela-area">
+      <h2>Disciplinas</h2>
+
+      <div class="tabela-responsiva">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+            <!-- As linhas serão criadas pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto escolar — dados fictícios para demonstração.</p>
+  </footer>
+
+  <!-- Script no final para garantir que o HTML já carregou -->
+  <script src="script.js"></script>
 </body>
 </html>

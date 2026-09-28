@@ -1,0 +1,190 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CORES DO PROJETO =====
+   Grafite: tons escuros para base e cards
+   Vermelho esmeralda: cor de destaque
+*/
+:root {
+  --grafite-escuro: #1c1c1e;
+  --grafite-medio: #2a2a2e;
+  --grafite-claro: #3a3a40;
+  --texto-claro: #f5f5f5;
+  --texto-cinza: #b8b8bd;
+  --vermelho-esmeralda: #c0392b;
+  --vermelho-esmeralda-claro: #e74c3c;
+  --fundo-pagina: #f2f2f4;
+}
+
+/* ===== CORPO DA PÁGINA ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fundo-pagina);
+  color: var(--grafite-escuro);
+  line-height: 1.5;
+  padding: 16px;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  background-color: var(--grafite-escuro);
+  color: var(--texto-claro);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border-bottom: 4px solid var(--vermelho-esmeralda);
+  margin-bottom: 24px;
+}
+
+.cabecalho h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  font-size: 1.1rem;
+  color: var(--vermelho-esmeralda-claro);
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.estudante {
+  font-size: 0.9rem;
+  color: var(--texto-cinza);
+  margin-top: 6px;
+}
+
+/* ===== CONTEÚDO ===== */
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background-color: var(--grafite-escuro);
+  color: var(--texto-claro);
+  border-radius: 10px;
+  padding: 18px;
+  border-left: 6px solid var(--vermelho-esmeralda);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texto-cinza);
+  margin-bottom: 8px;
+}
+
+.card .valor {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--texto-claro);
+}
+
+.card .valor.destaque-vermelho {
+  color: var(--vermelho-esmeralda-claro);
+}
+
+/* ===== ÁREA DA TABELA ===== */
+.tabela-area h2 {
+  margin-bottom: 12px;
+  color: var(--grafite-escuro);
+}
+
+/* Permite rolar a tabela no celular sem quebrar o layout */
+.tabela-responsiva {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  min-width: 700px; /* Garante que a tabela não fique espremida */
+}
+
+thead {
+  background-color: var(--grafite-escuro);
+  color: var(--texto-claro);
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* Linhas brancas limpas — sem zebra */
+tbody tr:hover {
+  background-color: #f9f9fb;
+}
+
+/* ===== SITUAÇÕES ===== */
+.situacao-bom {
+  color: #1e8449;
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: var(--vermelho-esmeralda);
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #888;
+  font-style: italic;
+}
+
+/* Nota ainda não lançada */
+.nota-vazia {
+  color: #999;
+  font-style: italic;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ===== AJUSTES PARA CELULAR ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.4rem;
+  }
+
+  .card .valor {
+    font-size: 1.3rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
